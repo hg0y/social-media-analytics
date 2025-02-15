@@ -1,0 +1,122 @@
+/* تعيين خلفية مريحة مع تدرجات */
+body {
+  background: linear-gradient(135deg, #1c1c1e, #2a2a2d);
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+}
+
+/* تحسين ترتيب العناصر */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* إضافة ديكورات (أشكال خلفية) */
+.container::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 20%, transparent 80%);
+  border-radius: 50%;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 20%, transparent 80%);
+  border-radius: 50%;
+}
+
+/* تحسين شريط البحث */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  background: rgba(129, 125, 125, 0.1);
+  padding: 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.search-box input,
+.search-box select,
+.search-box button {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.911);
+  color: rgb(53, 49, 49);
+  border: none;
+}
+
+/* تحسين الزر */
+.search-btn {
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #ffdb4d;
+}
+
+/* تحسين بطاقات المعلومات */
+.stats-card, .post-card {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(500px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* تحسين عرض المنشورات */
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+/* تحسين العناوين */
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 150px;
+}
+
+.section-title {
+  margin-top: 20px;
+  font-size: 32px;
+  text-align: center;
+}
+
+/* تحسين عرض الأيقونات */
+.stats-card p, .post-card p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
